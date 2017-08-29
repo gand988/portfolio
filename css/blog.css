@@ -1,0 +1,127 @@
+/* hide class used to hide some part of the code without bothering too much about things.*/
+.hide{
+  display: none;
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+  /*font-size: 20px;*/
+  font-size: 100%;
+  line-height: 1.4;
+}
+body{
+  padding: 20px;
+  background-color: #2D4671;
+  font-family: 'Poppins', sans-serif;
+}
+.center{
+  margin: 0 auto;
+  max-width: 900px;
+}
+.blog{
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+.blog-title{
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+/* navigation */
+.nav{
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  /*border: 1px solid #ccc;*/
+}
+.nav li{
+  display: inline-block;
+  margin: 4px;
+}
+.nav a{
+  outline: none;
+  text-decoration: none;
+  padding: 4px 7px;
+}
+/* normal link */
+.nav a:link{
+  color: #333;
+  background-color: #fff;
+}
+/* link visited */
+.nav a:visited{
+  color: #333;
+}
+.nav a:focus{
+  background: #f1f1f1;
+  border-bottom: 3px solid;
+}
+/* mouse hover the link */
+.nav a:hover{
+  color: #fff;
+  border-bottom: 3px solid;
+  background: #2D4671;
+  /*background: linear-gradient(45deg, #fff 50%, #ccc 50%);
+  transition: transform 5.4s;*/
+}
+/* Click */
+.nav a:active{
+  background: #4E658D;
+  color: #051839;
+}
+
+.post{
+  background-color: #f1f1f1;
+  margin-bottom: 5px;
+}
+.post-title{
+  font-weight: normal;
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+.post-link{
+  outline: none;
+  text-decoration: none;
+  color: #ccc;
+}
+.post-link:hover{
+  color: #2D4671;
+}
+.post-subtitle{
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+}
+.date{
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+.inside-post-subtitle{
+  display: inline-block;
+  background: #000;
+  color: #f1f1f1;
+  padding: 0 2px;
+}
+footer{
+  padding: 20px;
+  background-color: #333;
+}
+code{
+  padding: 3px 6px;
+  background-color: #555;
+  color: #f1f1f1;
+}
+blockquote{
+  background-color: #555;
+  color: #f1f1f1;
+}
+
+/* rule between post */
+.blog-rule{
+  width: 200px;
+  border-bottom: 1px solid #ccc;
+}

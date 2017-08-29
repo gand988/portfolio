@@ -1,0 +1,119 @@
+html,
+body{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background-color: #2D4671;
+  padding: 10px;
+  padding: 20px 50px;
+
+  font-size: 18px;
+  line-height: 1.4;
+  color: #f1f1f1;
+}
+
+/* mobile code */
+#main{
+  border: 5px solid #000;
+}
+.site-main{
+  padding: 10px;
+}
+.main-content h1{
+  padding: 0;
+  margin: 0;
+}
+h1 span {
+  display: block;
+}
+.main-content h3{
+  margin-top: 0;
+}
+/* my-works */
+.my-works ul{
+  list-style: none;
+  padding: 0;
+  margin-left: 0;
+}
+.my-works li{
+  display: inline;
+  padding: 5px 0;
+  margin: 5px 0;
+  line-height: 1.8;
+}
+.my-works a{
+  outline: none;
+  text-decoration: none;
+  margin: 5px 0;
+  padding: 0 5px;
+}
+/* normal link */
+.my-works a:link{
+  color: #f1f1f1;
+  background-color: #0cc;
+}
+/* link visited */
+.my-works a:visited{
+  color: #f1f1f1;
+}
+.my-works a:focus{
+  background: #ccc;
+  border-bottom: 3px solid;
+}
+/* mouse hover the link */
+.my-works a:hover{
+  color: #fff;
+  border-bottom: 3px solid;
+  background: #2D4671;
+}
+/* Click */
+.my-works a:active{
+  background: #4E658D;
+  color: #051839;
+}
+
+.social-icon a{
+  padding: 0 5px;
+}
+.social-icon a:nth-child(1n+2){
+  margin-left: 5px;
+}
+.social-icon a:link{
+  color: #f1f1f1;
+  transform: color 3s;
+}
+
+.social-icon a:visited{
+  color: #fff;
+}
+.social-icon a:hover{
+  color: #0cc;
+}
+
+@media (min-width: 1024px) {
+  #main{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 25px;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+  }
+  .main-content h1 span{
+    display: inline;
+  }
+  .main-content h1 span:hover{
+    background-color: #fff;
+    color: #2D4671;
+  }
+  .main-content h3{
+    margin: 0 0 50px 0;
+  }
+
+  .social-icon{
+    text-align: right;
+  }
+}
