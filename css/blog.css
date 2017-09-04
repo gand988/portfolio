@@ -125,3 +125,24 @@ blockquote{
   width: 200px;
   border-bottom: 1px solid #ccc;
 }
+
+.social-icon{
+  text-align: center;
+}
+.social-icon a{
+  padding: 0 5px;
+}
+.social-icon a:nth-child(1n+2){
+  margin-left: 5px;
+}
+.social-icon a:link{
+  color: #f1f1f1;
+  transform: color 3s;
+}
+
+.social-icon a:visited{
+  color: #fff;
+}
+.social-icon a:hover{
+  color: #0cc;
+}
