@@ -1,3 +1,8 @@
+/* hide class used to hide some part of the code without bothering too much about things.*/
+.hide{
+  display: none;
+}
+
 html,
 body{
   margin: 0;
@@ -33,50 +38,149 @@ h1 span {
   margin-top: 0;
 }
 /* my-works */
-.my-works ul{
+#my-works ul{
   list-style: none;
   padding: 0;
   margin-left: 0;
 }
-.my-works li{
+#my-works li{
   display: inline;
   padding: 5px 0;
   margin: 5px 0;
   line-height: 1.8;
 }
-.my-works a{
+#my-works a{
+  padding: 5px 0;
+  line-height: 1.8;
   outline: none;
   text-decoration: none;
   margin: 5px 0;
   padding: 0 5px;
 }
 /* normal link */
-.my-works a:link{
+#my-works a:link{
   color: #f1f1f1;
   background-color: #0cc;
 }
 /* link visited */
-.my-works a:visited{
+#my-works a:visited{
   color: #f1f1f1;
 }
-.my-works a:focus{
+#my-works a:focus{
   background: #ccc;
   border-bottom: 3px solid;
 }
 /* mouse hover the link */
-.my-works a:hover{
+#my-works a:hover{
   color: #fff;
   border-bottom: 3px solid;
   background: #2D4671;
 }
 /* Click */
-.my-works a:active{
+#my-works a:active{
   background: #4E658D;
   color: #051839;
 }
+/* SKILL SET DIAGRAM */
+#my-skill ul{
+  list-style: none;
+  padding-left: 0;
+}
+#my-skill ul li{
+  color: #333;
+}#my-skill ul{
+  list-style: none;
+  padding-left: 0;
+}
+#my-skill ul li{
+  color: #333;
+}
+/* SKILL SET DIAGRAM */
+#my-skill ul{
+  list-style: none;
+  padding-left: 0;
+}
+#my-skill ul li{
+  color: #333;
+}
+.bgg{
+  padding: 5px 10px;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+.skill-html,
+.skill-css,
+.skill-js{
+  position: relative;
+}
+.skill-html::after,
+.skill-css::after,
+.skill-js::after{
+  content : "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: -1;
 
+  /* animated part */
+  border-radius: 0 0 15px 0;
+  width: 0%; /* width for all the bars */
+  transition: width 1s;
+}
+.skill-html::before,
+.skill-css::before,
+.skill-js::before{
+  content : "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: -1;
+
+  /* animated part */
+  border-radius: 0 0 15px 0;
+  width: 100%; /* width for all the bars */
+}
+.skill-html::before{
+  background: #e55126;
+}
+.skill-html::after{
+/*  color of the background  */
+  background-color: #f1672c;
+}
+.skill-css::before{
+  background: #0c73b8;
+}
+.skill-css::after{
+/*  color of the background  */
+  background-color: #30a9dc;
+}
+.skill-js::before{
+  background: #e5a228;
+}
+.skill-js::after{
+/*  color of the background  */
+  background-color: #f1bf26;
+}
+
+.skill-html:hover::after{
+  width: 80%;
+}
+.skill-css:hover::after{
+  width: 50%;
+}
+.skill-js:hover::after{
+  width: 1%;
+}
+
+/* --------- */
 .social-icon a{
+  text-decoration: none;
   padding: 0 5px;
+}
+.social-text a{
+  display: block;
 }
 .social-icon a:nth-child(1n+2){
   margin-left: 5px;
@@ -92,6 +196,7 @@ h1 span {
 .social-icon a:hover{
   color: #0cc;
 }
+
 
 @media (min-width: 1024px) {
   #main{
@@ -112,8 +217,10 @@ h1 span {
   .main-content h3{
     margin: 0 0 50px 0;
   }
-
   .social-icon{
     text-align: right;
+  }
+  .social-text a{
+    display: inline;
   }
 }
