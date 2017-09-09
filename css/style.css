@@ -12,8 +12,8 @@ body{
 body{
   font-family: 'Poppins', sans-serif;
   background-color: #2D4671;
-  padding: 10px;
-  padding: 20px 50px;
+  /*padding: 10px;*/
+  /*padding: 20px 50px;*/
 
   font-size: 18px;
   line-height: 1.4;
@@ -22,7 +22,7 @@ body{
 
 /* mobile code */
 #main{
-  border: 5px solid #000;
+  border: 5px solid #fff;
 }
 .site-main{
   padding: 10px;
@@ -175,25 +175,24 @@ h1 span {
 }
 
 /* --------- */
-.social-icon a{
+.social-text a{
   text-decoration: none;
   padding: 0 5px;
 }
 .social-text a{
+  margin: 10px 0;
   display: block;
 }
-.social-icon a:nth-child(1n+2){
-  margin-left: 5px;
-}
-.social-icon a:link{
+
+.social-text a:link{
   color: #f1f1f1;
   transform: color 3s;
 }
 
-.social-icon a:visited{
+.social-text a:visited{
   color: #fff;
 }
-.social-icon a:hover{
+.social-text a:hover{
   color: #0cc;
 }
 
@@ -217,10 +216,13 @@ h1 span {
   .main-content h3{
     margin: 0 0 50px 0;
   }
-  .social-icon{
+  .social-text{
     text-align: right;
   }
   .social-text a{
     display: inline;
+  }
+  .social-text a:nth-child(1n+2){
+    margin-left: 5px;
   }
 }
