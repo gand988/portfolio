@@ -96,15 +96,9 @@ h1 span {
   padding: 5px 10px;
   font-weight: bold;
   margin-bottom: 3px;
-}
-.skill-html,
-.skill-css,
-.skill-js{
   position: relative;
 }
-.skill-html::after,
-.skill-css::after,
-.skill-js::after{
+.skill-animation::after{
   content : "";
   position: absolute;
   top: 0;
@@ -117,9 +111,7 @@ h1 span {
   width: 0%; /* width for all the bars */
   transition: width 1s;
 }
-.skill-html::before,
-.skill-css::before,
-.skill-js::before{
+.skill-animation::before{
   content : "";
   position: absolute;
   top: 0;
@@ -127,10 +119,12 @@ h1 span {
   height: 100%;
   z-index: -1;
 
-  /* animated part */
+  /* static background part */
   border-radius: 0 0 15px 0;
   width: 100%; /* width for all the bars */
 }
+
+/* HTML Skill */
 .skill-html::before{
   background: #e55126;
 }
@@ -138,6 +132,10 @@ h1 span {
 /*  color of the background  */
   background-color: #f1672c;
 }
+.skill-html:hover::after{
+  width: 80%;
+}
+/* CSS Skill */
 .skill-css::before{
   background: #0c73b8;
 }
@@ -145,6 +143,10 @@ h1 span {
 /*  color of the background  */
   background-color: #30a9dc;
 }
+.skill-css:hover::after{
+  width: 50%;
+}
+/* JS Skill */
 .skill-js::before{
   background: #e5a228;
 }
@@ -152,14 +154,18 @@ h1 span {
 /*  color of the background  */
   background-color: #f1bf26;
 }
-.skill-html:hover::after{
-  width: 80%;
-}
-.skill-css:hover::after{
-  width: 50%;
-}
 .skill-js:hover::after{
   width: 1%;
+}
+/* Git Skill */
+.skill-git::before{
+  background: #f54d27;
+}
+.skill-git::after{
+  background: #00909a;
+}
+.skill-git:hover::after{
+  width: 10%;
 }
 
 /* --------- */
