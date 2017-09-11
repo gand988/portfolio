@@ -83,89 +83,81 @@ h1 span {
   list-style: none;
   padding-left: 0;
 }
-#my-skill ul li{
-  color: #333;
-}#my-skill ul{
-  list-style: none;
-  padding-left: 0;
-}
-#my-skill ul li{
+#my-skill li{
   color: #333;
 }
-.bgg{
+.bars{
   padding: 5px 10px;
   font-weight: bold;
-  margin-bottom: 3px;
+  margin-bottom: 10px;
   position: relative;
 }
-.skill-animation::after{
+.skill-bar::before,
+.skill-bar::after{
   content : "";
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
-  z-index: -1;
-
-  /* animated part */
   border-radius: 0 0 15px 0;
-  width: 0%; /* width for all the bars */
+  z-index: -1;
+}
+.skill-bar::before{
+  /* lenght static bar */
+  width: 100%;
+  box-shadow: 3px 3px 6px;
+}
+.skill-bar::after{
+  /* lenght animated bar */
+  width: 0%;
+  /* transition speed */
   transition: width 1s;
 }
-.skill-animation::before{
-  content : "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  z-index: -1;
 
-  /* static background part */
-  border-radius: 0 0 15px 0;
-  width: 100%; /* width for all the bars */
-}
-
-/* HTML Skill */
+/* COLORS AND WIDTH */
 .skill-html::before{
-  background: #e55126;
+/* color static bar */
+  background-color: #e55126;
 }
-.skill-html::after{
-/*  color of the background  */
-  background-color: #f1672c;
-}
-.skill-html:hover::after{
-  width: 80%;
-}
-/* CSS Skill */
 .skill-css::before{
-  background: #0c73b8;
+  background-color: #0c73b8;
+}
+.skill-js::before{
+  background-color: #e5a228;
+}
+.skill-git::before{
+  background-color: #f54d27;
+}
+
+.skill-html::after{
+/*  color animated bar  */
+  background-color: #f1672c;
+/* add the width if want a static bar   */
+/*   width: 80%; */
 }
 .skill-css::after{
-/*  color of the background  */
   background-color: #30a9dc;
+}
+.skill-js::after{
+  background-color: #f1bf26;
+}
+.skill-git::after{
+  background-color: #00909a;
+}
+/*
+  change the 'width' value for change the fill
+*/
+.skill-html:hover::after{
+  width: 80%;
 }
 .skill-css:hover::after{
   width: 50%;
 }
-/* JS Skill */
-.skill-js::before{
-  background: #e5a228;
-}
-.skill-js::after{
-/*  color of the background  */
-  background-color: #f1bf26;
-}
 .skill-js:hover::after{
-  width: 1%;
-}
-/* Git Skill */
-.skill-git::before{
-  background: #f54d27;
-}
-.skill-git::after{
-  background: #00909a;
+  width: 5%;
 }
 .skill-git:hover::after{
-  width: 10%;
+  width: 15%;
 }
 
 /* --------- */
