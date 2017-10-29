@@ -11,15 +11,15 @@ body{
 
 body{
   font-family: 'Poppins', sans-serif;
-  background-color: #2D4671;
   font-size: 18px;
   line-height: 1.4;
+  background-color: #2D4671;
   color: #f1f1f1;
 }
 
 /* mobile code */
 #main{
-  border: 5px solid #fff;
+  /*border: 5px solid #fff;*/
 }
 .site-main{
   padding: 10px;
@@ -29,7 +29,7 @@ body{
   margin: 0;
 }
 h1 span {
-  display: block;
+  /*display: block;*/
 }
 .main-content h3{
   margin-top: 0;
@@ -172,7 +172,6 @@ h1 span {
 
 .social-text a:link{
   color: #f1f1f1;
-  transform: color 3s;
 }
 
 .social-text a:visited{
@@ -182,7 +181,13 @@ h1 span {
   color: #0cc;
 }
 
-
+.creator{
+  text-align: center;
+  margin-top: 30px;
+}
+footer{
+  background-color: #333;
+}
 @media (min-width: 1024px) {
   #main{
     position: absolute;
@@ -191,6 +196,15 @@ h1 span {
     padding: 25px;
     -webkit-transform: translateX(-50%) translateY(-50%);
             transform: translateX(-50%) translateY(-50%);
+  }
+  .site-main{
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+  }
+  .main-content h1{
+    /*font-size: 50px;*/
   }
   .main-content h1 span{
     display: inline;
