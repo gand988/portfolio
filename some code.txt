@@ -1,0 +1,210 @@
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+				box-sizing: border-box;
+
+  /* outline: .5px solid black; */
+}
+/* hide class used to hide some part of the code without bothering too much about things.*/
+.hide{
+  display: none;
+}
+
+html,
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.4;
+  
+    
+  background: #274B81;
+  /* background: -webkit-linear-gradient(top left,#274B81, #5399db ); */
+  /* background: -moz-linear-gradient(top left,#274B81, #5399db ); */
+  /* background: linear-gradient(top left,#274B81, #5399db ); */
+  
+  /* background-color: #274B81; */
+  color: #E5EFF0;
+  
+}
+
+/* mobile code */
+#main{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  /* border: 10px solid #E5EAEB; */
+}
+.site-main{
+  padding: 20px;
+}
+.sections{
+  /* padding-bottom: 20px; */
+  margin-bottom: 40px;
+}
+#main-name{
+  font-size: 50px;
+  font-weight: 700;
+  /* margin-bottom: 10px; */
+  animation: animTitle 2.5s forwards;
+}
+#main-descr{
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 500;
+}
+/*
+* title sections
+*/
+.title-section{
+  position: relative;
+  display: block;
+  font-size: 30px;
+  font-weight: 200;
+  border-bottom: 1px solid #E5EFF0;
+  /* outline: 1px solid white; */
+}
+
+/* 
+* my-works
+*/
+#my-works{
+  width: 100%;
+}
+.works-link{
+  position: relative;
+  display: inline-block;
+  padding: 5px 10px;
+  line-height: 1.8;
+  text-decoration: none;
+  margin-top: 10px;
+  color: #274B81;
+}
+#my-works .works-link:nth-of-type(n+1){
+  margin-right: 5px;
+}
+#my-works .works-link:hover{
+  color: #E5EAEB;
+}
+#my-works .works-link::after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  background-color: #E5EAEB;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+#my-works .works-link:hover::after{
+  transition: all cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  animation: animLinks .25s forwards cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+@keyframes animLinks{
+  to{height: 0; border: 1px solid #E5EAEB;}
+}
+#my-works a:link{
+  color: #274B81;
+}
+#my-works a:visited{
+  color: #274B81;
+}
+/* --------- */
+.social-text a{
+  text-decoration: none;
+  padding: 0 5px;
+}
+.social-text a{
+  margin: 10px 0;
+  display: block;
+}
+
+.social-text a:link{
+  color: #f1f1f1;
+}
+
+.social-text a:visited{
+  color: #fff;
+}
+.social-text a:hover{
+  color: #0cc;
+}
+
+.creator{
+  text-align: center;
+  margin-top: 30px;
+}
+footer{
+  background-color: #333;
+}
+
+/*
+* Desktop 
+*/
+@media (min-width: 1024px) {
+  #main{
+    justify-content: center;
+  }
+  .site-main{
+    /* width: 100%; */
+    max-width: 900px;
+  }
+  #main-name{
+    font-size: 80px;
+    animation: animTitle 2.5s forwards;
+  }
+
+  .main-content h3{
+    margin: 0 0 50px 0;
+  }
+
+  /*
+  * works
+  */
+ /*
+  * social
+  */
+  .social-text{
+    text-align: right;
+  }
+  .social-text a{
+    display: inline;
+  }
+  .social-text a:nth-child(1n+2){
+    margin-left: 5px;
+  }
+}
+
+/*
+* Keyframes
+*/
+
+@keyframes animTitle{
+  0%{color: #274B81;background-color: #fff;
+    -webkit-clip-path: polygon( 95% 0, 100% 0, 100% 100%, 95% 100%);
+            clip-path: polygon( 95% 0, 100% 0, 100% 100%, 95% 100%);}
+  30%{color: #274B81;background-color: #fff;
+    -webkit-clip-path: polygon( 0 0, 5% 0, 5% 100%, 0 100%);
+            clip-path: polygon( 0 0, 5% 0, 5% 100%, 0 100%);}
+  45%{color: #274B81;
+    -webkit-clip-path: polygon( 0 95%, 5% 95%, 5% 100%, 0 100%);
+            clip-path: polygon( 0 95%, 5% 95%, 5% 100%, 0 100%);}  
+  60%{color: #274B81;
+    -webkit-clip-path: polygon( 0 95%, 100% 95%, 100% 100%, 0 100%);
+            clip-path: polygon( 0 95%, 100% 95%, 100% 100%, 0 100%);}  
+  100%{
+    -webkit-clip-path: polygon( 0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon( 0 0, 100% 0, 100% 100%, 0 100%);}    
+}

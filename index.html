@@ -1,82 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-  <!-- Standard meta tags -->
-  <meta name="keywords" content="portfolio"> 					<!-- key for web search-->
-  <meta name="description" content="Matteo Zanda Portfolio">					<!-- description of the website -->
-  <meta name="author" content="Matteo 'Gand988' Zanda">	<!-- author of the website -->
+<!-- Standard meta tags -->
+<meta name="keywords" content="portfolio"> 					<!-- key for web search-->
+<meta name="description" content="Matteo Zanda Portfolio">					<!-- description of the website -->
+<meta name="author" content="Matteo 'Gand988' Zanda">	<!-- author of the website -->
 
-  <!-- Core CSS -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+<!-- Core CSS -->
+<link rel="stylesheet" href="css/normalize.css">
+<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/style.css">
 
-  <!-- Fonts --> <!-- https://fonts.google.com -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+<!-- Fonts --> <!-- https://fonts.google.com -->
+<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-  <!-- Icons -->
-  <link rel="stylesheet" href="css/font-awesome.min.css">
+<!-- Icons -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
-  <!-- FavIcon + Title -->
-  <!-- <link rel="shortcut icon" href="img/GC_2015.jpg"> -->
-  <link rel="shortcut icon" href="img/GC_2015.png">
+<!-- FavIcon + Title -->
+<link rel="shortcut icon" href="img/GC_2015.jpg">
 
-  <title>Matteo Zanda - self-taught web developer</title>
+<title>Matteo Zanda - self-taught web developer</title>
 
 </head>
 
 <body>
-  <!-- main -->
-  <div id="main">
-    <div class="site-main">
-      <div class="main-content">
-        <h1><span>Matteo</span> <!--<span>'Gand988'</span>--> <span>Zanda</span></h1>
-        <h3>Self-taught Front-end web developer.</h3>
-      </div>
-      <!-- about me -->
-      <div class="" id="">
-        <h1 class="title">About me</h1>
-        <p>Hello my name is Matteo Zanda. I'm a junior self-taught front-end developer based in Sardinia, Italy. </p>
-        <p>I built this site from scratch using <span style="color: #e55126; font-weight: 500;">HTML5</span> & <span style="color: #99C46D; font-weight: 500;">CSS3</span>.</p>
-      </div>
-      <!-- my works -->
-      <div id="my-works">
-        <h1 class="title">Projects</h1>
-        <a href="https://gand988.github.io/CTHCBedgeGenerator/">#CTHC badge generator</a>
-        <a href="https://ctt.neocities.org/" title="Chrono Trigger Tournament 2016">Chrono Trigger Tournament 2016</a>
-        <a href="https://gand988.github.io/DMT/" title="Chrono Trigger Tournament 2017">Chrono Trigger Tournament 2017</a>
-        <a href="img/welovechallenge7_wall.jpg">#welovechallenge7</a>
-      </div>
-            <!-- social -->
-      <div class="social-text">
-        <h1 class="title">Find me</h1>
-        <a href="https://www.linkedin.com/in/matteo-zanda-webdev/" title="linkedin">Linkedin</a>
-        <a href="https://github.com/gand988" title="Github">Github</a>
-        <a href="https://codepen.io/gand988" title="Codepen">Codepen</a>
-      </div>
-      <div class="creator">
-        Website created with <span style="color: #e55126; font-weight: 700;">HTML5</span> & <span style="color: #99C46D; font-weight: 700;">CSS3</span> & <span style="color: #EC407A;"><i class="fa fa-heart" aria-hidden="true"></i></span> by Matteo Zanda.
-      </div>
+<!-- main -->
+<div id="main">
+  <div class="site-main">
+    <div id="header" class="main-content sections"> 
+      <div id="main-name">Matteo Zanda</div>
+      <div id="main-descr">Junior Front-end web developer.</div>
+    </div>
+    <!-- about me -->
+    <div id="about" class="sections">
+      <div class="title-section">About me</div>
+      <p>Hello my name is Matteo Zanda. <br> I'm a junior self-taught front-end developer based in <span class="city">Sardinia, Italy.</span></p>
+      <p>I built this site from scratch using <span style="color: #e55126; font-weight: 500;">HTML5</span> & <span style="color: #99C46D; font-weight: 500;">CSS3</span>.</p>
+    </div>
+    <!-- my works -->
+    <div id="my-works" class="sections">
+      <div class="title-section">My works</div>
+      <a class="works-link" href="https://gand988.github.io/CTHCBedgeGenerator/" title="#CTHC badge generator">#CTHC badge generator</a>
+      <a class="works-link" href="https://devvit.io/" title="devvit.io - a dev community">Devvit.io</a>
+      <a class="works-link" href="https://gand988.github.io/DMT/" title="Chrono Trigger Tournament 2017">CTT 2017</a>
+      <a class="works-link" href="https://ctt.neocities.org/" title="Chrono Trigger Tournament 2016">CTT 2016</a>
+      <a class="works-link" href="img/welovechallenge7_wall.jpg" title="#welovechallenge7">#welovechallenge7</a>
+    </div>
+    <!-- social -->
+    <div id="social" class="social-text sections">
+      <div class="title-section">Find me</div>
+      <a href="https://twitter.com/GanD988" title="twitter">Twitter</a>
+      <a href="https://www.linkedin.com/in/matteo-zanda-webdev/" title="linkedin">Linkedin</a>
+      <a href="https://github.com/gand988" title="Github">Github</a>
+      <a href="https://codepen.io/gand988" title="Codepen">Codepen</a>
+    </div>
+    <div class="creator">
+      Website created with <span style="color: #e55126; font-weight: 700;">HTML5</span> & <span style="color: #99C46D; font-weight: 700;">CSS3</span> & <span style="color: #EC407A;"><i class="fas fa-heart"></i></span> by Matteo Zanda
     </div>
   </div>
-  <!-- google-analytics -->
-
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-100707453-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
+</div>
+<!-- google-analytics -->
+<script src="js/script.js"></script>
 </body>
 </html>

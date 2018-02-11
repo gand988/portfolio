@@ -1,3 +1,12 @@
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+				box-sizing: border-box;
+
+  /* outline: .5px solid black; */
+}
 /* hide class used to hide some part of the code without bothering too much about things.*/
 .hide{
   display: none;
@@ -7,159 +16,111 @@ html,
 body{
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
 body{
   font-family: 'Poppins', sans-serif;
-  font-size: 18px;
   line-height: 1.4;
-  background-color: #2D4671;
-  color: #f1f1f1;
+  
+    
+  background: #274B81;
+  /* background: -webkit-linear-gradient(top left,#274B81, #5399db ); */
+  /* background: -moz-linear-gradient(top left,#274B81, #5399db ); */
+  /* background: linear-gradient(top left,#274B81, #5399db ); */
+  
+  /* background-color: #274B81; */
+  color: #E5EFF0;
+  
 }
 
 /* mobile code */
 #main{
-  /*border: 5px solid #fff;*/
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  /* border: 10px solid #E5EAEB; */
 }
 .site-main{
-  padding: 10px;
+  padding: 20px;
 }
-.main-content h1{
-  padding: 0;
-  margin: 0;
+.sections{
+  /* padding-bottom: 20px; */
+  margin-bottom: 40px;
 }
-h1 span {
-  /*display: block;*/
+#main-name{
+  font-size: 50px;
+  font-weight: 700;
+  /* margin-bottom: 10px; */
+  animation: animTitle 2.5s forwards;
 }
-.main-content h3{
-  margin-top: 0;
-}
-/* my-works */
-#my-works ul{
-  list-style: none;
-  padding: 0;
-  margin-left: 0;
-}
-#my-works li{
-  display: inline;
-  padding: 5px 0;
-  margin: 5px 0;
-  line-height: 1.8;
-}
-#my-works a{
-  padding: 5px 0;
-  line-height: 1.8;
-  outline: none;
-  text-decoration: none;
-  margin: 5px 0;
-  padding: 0 5px;
-}
-/* normal link */
-#my-works a:link{
-  color: #f1f1f1;
-  background-color: #0cc;
-}
-/* link visited */
-#my-works a:visited{
-  color: #f1f1f1;
-}
-#my-works a:focus{
-  background: #ccc;
-  border-bottom: 3px solid;
-}
-/* mouse hover the link */
-#my-works a:hover{
-  color: #fff;
-  border-bottom: 3px solid;
-  background: #2D4671;
-}
-/* Click */
-#my-works a:active{
-  background: #4E658D;
-  color: #051839;
-}
-/* SKILL SET DIAGRAM */
-#my-skill ul{
-  list-style: none;
-  padding-left: 0;
-}
-#my-skill li{
-  color: #333;
-}
-.bars{
-  padding: 5px 10px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  position: relative;
-}
-.skill-bar::before,
-.skill-bar::after{
-  content : "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  border-radius: 0 0 15px 0;
-  z-index: -1;
-}
-.skill-bar::before{
-  /* lenght static bar */
-  width: 100%;
-  box-shadow: 3px 3px 6px;
-}
-.skill-bar::after{
-  /* lenght animated bar */
-  width: 0%;
-  /* transition speed */
-  transition: width 1s;
-}
-
-/* COLORS AND WIDTH */
-.skill-html::before{
-/* color static bar */
-  background-color: #e55126;
-}
-.skill-css::before{
-  background-color: #0c73b8;
-}
-.skill-js::before{
-  background-color: #e5a228;
-}
-.skill-git::before{
-  background-color: #f54d27;
-}
-
-.skill-html::after{
-/*  color animated bar  */
-  background-color: #f1672c;
-/* add the width if want a static bar   */
-/*   width: 80%; */
-}
-.skill-css::after{
-  background-color: #30a9dc;
-}
-.skill-js::after{
-  background-color: #f1bf26;
-}
-.skill-git::after{
-  background-color: #00909a;
+#main-descr{
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 500;
 }
 /*
-  change the 'width' value for change the fill
+* title sections
 */
-.skill-html:hover::after{
-  width: 80%;
-}
-.skill-css:hover::after{
-  width: 50%;
-}
-.skill-js:hover::after{
-  width: 5%;
-}
-.skill-git:hover::after{
-  width: 15%;
+.title-section{
+  position: relative;
+  display: block;
+  font-size: 30px;
+  font-weight: 200;
+  border-bottom: 1px solid #E5EFF0;
+  /* outline: 1px solid white; */
 }
 
+/* 
+* my-works
+*/
+#my-works{
+  width: 100%;
+}
+.works-link{
+  position: relative;
+  display: inline-block;
+  padding: 5px 10px;
+  line-height: 1.8;
+  text-decoration: none;
+  margin-top: 10px;
+  color: #274B81;
+}
+.works-link:nth-of-type(n+1){
+  margin-right: 5px;
+}
+.works-link:hover{
+  color: #E5EAEB;
+}
+.works-link::after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  background-color: #E5EAEB;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.works-link:hover::after{
+  transition: all cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  animation: animLinks .25s forwards cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+@keyframes animLinks{
+  to{height: 0; border: 1px solid #E5EAEB;}
+}
+.works-link a:link{
+  color: #274B81;
+}
+.works-link a:visited{
+  color: #274B81;
+}
 /* --------- */
 .social-text a{
   text-decoration: none;
@@ -188,34 +149,68 @@ h1 span {
 footer{
   background-color: #333;
 }
+
+/*
+* Desktop 
+*/
 @media (min-width: 1024px) {
   #main{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    padding: 25px;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-            transform: translateX(-50%) translateY(-50%);
+    justify-content: center;
   }
   .site-main{
-    padding-top: 0px;
-    padding-left: 0px;
-    padding-bottom: 0px;
-    padding-right: 0px;
+    /* width: 100%; */
+    max-width: 900px;
   }
-  .main-content h1{
-    /*font-size: 50px;*/
-  }
-  .main-content h1 span{
-    display: inline;
-  }
-  .main-content h1 span:hover{
-    background-color: #fff;
-    color: #2D4671;
+  #main-name{
+    font-size: 80px;
+    animation: animTitle 2.5s forwards;
   }
   .main-content h3{
     margin: 0 0 50px 0;
   }
+/*
+* city
+*/
+.city{
+  display: inline-block;
+  padding: 5px;
+  border-bottom: 1px dotted #E5EAEB; 
+}
+.city::after{
+  position: absolute;
+  left:50%;w
+  top:50%;
+  transform: translate(-50%, -50%); 
+  content: "";
+  z-index: 3;
+  width: 0;
+  height: 0;
+  border-radius:50%;
+  background-color: #fff;
+  animation: foo-out .5s forwards;
+}
+.city:hover::after{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../img/sardegna.png');
+  animation: foo-in 1s forwards;
+}
+@keyframes foo-in{
+  0%{width:0; height: 0;}
+  50%{width: 665px; height: 661px;border-radius:50%}
+  60%{border-radis:0}
+  100%{width: 665px; height: 661px;border-radius: 0;}
+}
+/* @keyframes foo-out{
+  from{width: 665px; height: 661px;}
+} */
+  /*
+  * works
+  */
+ /*
+  * social
+  */
   .social-text{
     text-align: right;
   }
@@ -225,4 +220,26 @@ footer{
   .social-text a:nth-child(1n+2){
     margin-left: 5px;
   }
+}
+
+/*
+* Keyframes
+*/
+
+@keyframes animTitle{
+  0%{color: #274B81;background-color: #fff;
+    -webkit-clip-path: polygon( 95% 0, 100% 0, 100% 100%, 95% 100%);
+            clip-path: polygon( 95% 0, 100% 0, 100% 100%, 95% 100%);}
+  30%{color: #274B81;background-color: #fff;
+    -webkit-clip-path: polygon( 0 0, 5% 0, 5% 100%, 0 100%);
+            clip-path: polygon( 0 0, 5% 0, 5% 100%, 0 100%);}
+  45%{color: #274B81;
+    -webkit-clip-path: polygon( 0 95%, 5% 95%, 5% 100%, 0 100%);
+            clip-path: polygon( 0 95%, 5% 95%, 5% 100%, 0 100%);}  
+  60%{color: #274B81;
+    -webkit-clip-path: polygon( 0 95%, 100% 95%, 100% 100%, 0 100%);
+            clip-path: polygon( 0 95%, 100% 95%, 100% 100%, 0 100%);}  
+  100%{
+    -webkit-clip-path: polygon( 0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon( 0 0, 100% 0, 100% 100%, 0 100%);}    
 }
