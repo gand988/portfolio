@@ -1,0 +1,16 @@
+body{
+  background-color: #000;
+}
+.curr{
+  font-size: 20px;
+  color: white; 
+}
+img{
+  /* display: block;  */
+  /* height: auto;  */
+  max-width: 100%; 
+}
+.mob img{
+  display: block; 
+  max-width: 414px;
+}
